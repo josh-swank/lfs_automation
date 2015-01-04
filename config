@@ -1,0 +1,12 @@
+extern LFS_ROOT_DEV=/dev/sda6
+extern LFS_ROOT_TYPE=ext4
+extern LFS_ROOT=/mnt/lfs
+extern LFS_SWAP_DEV=(/dev/sda5)
+extern LFS_MOUNT_DEV=(/dev/sda1 /dev/sda7 /dev/sda8)
+extern LFS_MOUNT_TYPE=(ext2 ext4 ext4)
+extern LFS_MOUNT=(/boot /usr/src /home)
+
+extern LFS_USER=lfs
+extern LFS_GROUP=lfs
+
+export LFS_WORK_ENV=$LFS/WORKSPACE
