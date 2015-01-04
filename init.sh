@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. set-env.sh
+. env
 ./mount.sh
 ./make-user.sh

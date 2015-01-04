@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$LFS" ]; then . $(dirname ${BASH_SOURCE[0]})/set-env.sh; fi
+if [ -z "$LFS" ]; then . $(dirname ${BASH_SOURCE[0]})/env; fi
 
 groupadd lfs
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs
@@ -10,7 +10,7 @@ cat > /home/lfs/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
 EOF
 
-cat $(dirname ${BASH_SOURCE[0]})/set-env.sh > /home/lfs/.bashrc
+cat $(dirname ${BASH_SOURCE[0]})/env > /home/lfs/.bashrc
 cat >> /home/lfs/.bashrc << "EOF"
 set +h
 umask 022

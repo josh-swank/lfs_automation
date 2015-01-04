@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$LFS" ]; then . $(dirname ${BASH_SOURCE[0]})/set-env.sh; fi
+if [ -z "$LFS" ]; then . $(dirname ${BASH_SOURCE[0]})/env; fi
 
 swapon -v /dev/sda5
 
